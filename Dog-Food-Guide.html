@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Can My Dog Eat This?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    main {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #4CAF50;
+      border-bottom: 3px solid #4CAF50;
+      padding-bottom: 1rem;
+      font-size: 2rem;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    li:hover {
+      transform: scale(1.05);
+    }
+    .safe {
+      border-left: 5px solid #4CAF50;
+    }
+    .unsafe {
+      border-left: 5px solid #f44336;
+    }
+    .icon {
+      margin-right: 20px;
+      font-size: 2rem;
+      color: #4CAF50;
+    }
+    #search {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 3rem;
+      display: block;
+      background-color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #eee;
+      font-size: 1rem;
+      color: #555;
+    }
+  </style>
+  <script>
+    function filterItems() {
+      const input = document.getElementById('search');
+      const filter = input.value.toLowerCase();
+      const items = document.querySelectorAll('li');
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? 'flex' : 'none';
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Can My Dog Eat This?</h1>
+    <p>A simple guide to what dogs can and cannot eat</p>
+  </header>
+  <main>
+    <input type="text" id="search" onkeyup="filterItems()" placeholder="Search for a food...">
+
+    <section>
+      <h2>Safe for Dogs</h2>
+      <ul>
+        <li class="safe"><div><strong>Carrots:</strong> Great for teeth and low in calories.</div></li>
+        <li class="safe"><div><strong>Peanut Butter:</strong> A good source of protein (xylitol-free only).</div></li>
+        <li class="safe"><div><strong>Apples:</strong> Remove seeds and core, rich in vitamins A and C.</div></li>
+        <li class="safe"><div><strong>Cooked Chicken:</strong> Plain, boneless, and unseasoned.</div></li>
+        <li class="safe"><div><strong>Pumpkin:</strong> Great for digestion, plain and cooked.</div></li>
+        <li class="safe"><div><strong>Blueberries:</strong> Full of antioxidants and fiber.</div></li>
+        <li class="safe"><div><strong>Watermelon:</strong> Remove seeds and rind, hydrating treat.</div></li>
+        <li class="safe"><div><strong>Green Beans:</strong> Low-calorie, nutritious snack.</div></li>
+        <li class="safe"><div><strong>Rice:</strong> Plain cooked rice is easily digestible.</div></li>
+        <li class="safe"><div><strong>Oatmeal:</strong> Good fiber source, especially for older dogs.</div></li>
+        <li class="safe"><div><strong>Zucchini:</strong> Low calorie and full of nutrients.</div></li>
+        <li class="safe"><div><strong>Plain Yogurt:</strong> Provides calcium and probiotics (avoid sugar/artificial sweeteners).</div></li>
+        <li class="safe"><div><strong>Sweet Potatoes:</strong> Cooked and plain, great source of fiber and vitamins.</div></li>
+        <li class="safe"><div><strong>Bananas:</strong> High in potassium and great for energy.</div></li>
+        <li class="safe"><div><strong>Strawberries:</strong> Antioxidant-rich, low-calorie fruit.</div></li>
+        <li class="safe"><div><strong>Spinach:</strong> Full of vitamins A, C, and K.</div></li>
+        <li class="safe"><div><strong>Cucumber:</strong> Low calorie and hydrating treat.</div></li>
+        <li class="safe"><div><strong>Turkey:</strong> Lean, cooked, boneless, and unseasoned.</div></li>
+        <li class="safe"><div><strong>Eggs:</strong> Great source of protein and essential nutrients (cooked).</div></li>
+        <li class="safe"><div><strong>Chia Seeds:</strong> Full of omega-3 fatty acids and fiber.</div></li>
+        <li class="safe"><div><strong>Watercress:</strong> Rich in antioxidants and vitamins.</div></li>
+        <li class="safe"><div><strong>Beets:</strong> Great for digestive health and low in calories.</div></li>
+        <li class="safe"><div><strong>Cashews:</strong> In moderation, safe for dogs and high in healthy fats.</div></li>
+        <li class="safe"><div><strong>Cauliflower:</strong> High in fiber, low in calories.</div></li>
+        <li class="safe"><div><strong>Grapes (in moderation):</strong> Beneficial for most dogs, but not for all.</div></li>
+        <li class="safe"><div><strong>Pears:</strong> High in fiber, but remove the seeds.</div></li>
+        <li class="safe"><div><strong>Carob:</strong> A safe alternative to chocolate.</div></li>
+        <li class="safe"><div><strong>Fennel:</strong> Great for digestive issues.</div></li>
+        <li class="safe"><div><strong>Asparagus:</strong> Rich in fiber and vitamins.</div></li>
+        <li class="safe"><div><strong>Potatoes:</strong> Cooked, plain potatoes are fine, but avoid raw.</div></li>
+        <li class="safe"><div><strong>Almonds:</strong> In small amounts, safe for dogs.</div></li>
+        <li class="safe"><div><strong>Cherries:</strong> High in antioxidants (without pits).</div></li>
+        <li class="safe"><div><strong>Radishes:</strong> Low-calorie treat rich in vitamins.</div></li>
+        <li class="safe"><div><strong>Apricots:</strong> In small amounts, they can be safe without the pit.</div></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Unsafe for Dogs</h2>
+      <ul>
+        <li class="unsafe"><div><strong>Chocolate:</strong> Toxic and can be fatal in large amounts.</div></li>
+        <li class="unsafe"><div><strong>Grapes and Raisins:</strong> Can cause kidney failure.</div></li>
+        <li class="unsafe"><div><strong>Onions and Garlic:</strong> Damages red blood cells and can cause anemia.</div></li>
+        <li class="unsafe"><div><strong>Avocado:</strong> Contains persin which can be harmful.</div></li>
+        <li class="unsafe"><div><strong>Alcohol:</strong> Extremely dangerous, even in small amounts.</div></li>
+        <li class="unsafe"><div><strong>Coffee:</strong> Contains caffeine which is toxic to dogs.</div></li>
+        <li class="unsafe"><div><strong>Macadamia Nuts:</strong> Can cause weakness, vomiting, and tremors.</div></li>
+        <li class="unsafe"><div><strong>Cooked Bones:</strong> Can splinter and cause internal injuries.</div></li>
+        <li class="unsafe"><div><strong>Xylitol:</strong> A sweetener found in gum and baked goods, extremely toxic.</div></li>
+        <li class="unsafe"><div><strong>Yeast Dough:</strong> Can expand in the stomach and cause serious issues.</div></li>
+        <li class="unsafe"><div><strong>Salt:</strong> Too much can cause dehydration and sodium ion poisoning.</div></li>
+        <li class="unsafe"><div><strong>Fat Trimmings:</strong> Can cause pancreatitis in dogs.</div></li>
+        <li class="unsafe"><div><strong>Chives:</strong> Related to onions and garlic, harmful to dogs.</div></li>
+        <li class="unsafe"><div><strong>Rhubarb:</strong> Contains oxalates that can be toxic to dogs.</div></li>
+        <li class="unsafe"><div><strong>Blue Cheese:</strong> Contains toxins that can lead to digestive issues.</div></li>
+        <li class="unsafe"><div><strong>Mustard:</strong> Contains compounds that can irritate a dog's digestive system.</div></li>
+        <li class="unsafe"><div><strong>Tomato Plants:</strong> Contain solanine, which is toxic to dogs.</div></li>
+        <li class="unsafe"><div><strong>Pineapple Cores:</strong> Can cause intestinal blockage if swallowed.</div></li>
+        <li class="unsafe"><div><strong>Spicy Foods:</strong> Can cause digestive upset and discomfort.</div></li>
+        <li class="unsafe"><div><strong>Artificial Sweeteners:</strong> Found in gum, baked goods, and candies, toxic to dogs.</div></li>
+        <li class="unsafe"><div><strong>Red Bell Peppers:</strong> Can cause mild irritation in some dogs.</div></li>
+        <li class="unsafe"><div><strong>Walnuts:</strong> Can cause seizures and digestive problems in dogs.</div></li>
+        <li class="unsafe"><div><strong>Black Walnuts:</strong> Toxic to dogs, can cause tremors and seizures.</div></li>
+        <li class="unsafe"><div><strong>Raw Fish:</strong> May contain parasites and toxins harmful to dogs.</div></li>
+        <li class="unsafe"><div><strong>Hops:</strong> Used in brewing beer, can cause fatal reactions in dogs.</div></li>
+        <li class="unsafe"><div><strong>Cloves:</strong> Can cause liver damage and digestive upset.</div></li>
+        <li class="unsafe"><div><strong>Coconut (flesh):</strong> High in fat, can cause digestive issues.</div></li>
+        <li class="unsafe"><div><strong>Cherries (pit):</strong> The pit can cause cyanide poisoning in dogs.</div></li>
+        <li class="unsafe"><div><strong>Potatoes (raw):</strong> Contains solanine, which is toxic to dogs.</div></li>
+        <li class="unsafe"><div><strong>Persimmons:</strong> Can cause gastrointestinal issues.</div></li>
+      </ul>
+    </section>
+
+  </main>
+  <footer>
+    <p>Disclaimer: This site is for informational purposes only. Always consult your vet before giving new foods to your dog.</p>
+  </footer>
+</body>
+</html>
